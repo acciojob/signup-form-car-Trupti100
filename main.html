@@ -1,52 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signup Form</title>
+	<link rel="stylesheet" href="styles.css">
+	<style>
+		button{
+	background: none;
+	border: none;
+	color: white;
+	background-color: blue;
+	cursor: pointer;
+	height: 25px;
+	width: 65px;
+	font-family: georgia;
+	font-weight: 500;
+	border-radius: 5px
+}
+button:hover{
+	background-color: red;
+	height: 30px;
+	width: 70px;
+	transition: .2s ease;
+	font-weight: 700;
+	border-radius: 10px;
+}
+	</style>
 </head>
+
 <body>
-    <h1>Signup Form Car</h1>
-    <form action="#" method="post">
-        <label for="Name">Name<span>*</span>:</label>
-        <input type="Text" id="Name" name="Name" required><br>
-        
-        <label for="Email">Email<span>*</span>:</label>
-        <input type="Email" id="Email" name="Email" required><br>
-        
-        <label>Gender<span>*</span>:</label>
-        <input type="radio" id="gender_m" name="gender" value="male" required>
-        <label for="gender_m">Male</label>
-        <input type="radio" id="gender_f" name="gender" value="female" required>
-        <label for="gender_f">Female</label><br>
-        
-        <label for="cars">Car Brands<span>*</span>:</label>
-        <select id="cars" name="cars" required>
-            <option value="" disabled selected>Select--</option>
-            <option value="toyota">Toyota</option>
-            <option value="honda">Honda</option>
-            <option value="ford">Ford</option>
-            <!-- Add more options as needed -->
-        </select><br>
-        
-        <label for="age">Age<span>*</span>:</label>
-        <input type="Number" id="age" name="age" required><br>
-        
-        <label for="dob">DOB<span>*</span>:</label>
-        <input type="Date" id="dob" name="dob" required><br>
-        
-        <label for="Tel">Phone Number:</label>
-        <input type="Tel" id="Tel" name="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="xxx-xxx-xxxx"><br>
-        
-        <label for="Password">Password<span>*</span>:</label>
-        <input type="Password" id="Password" name="Password" required><br>
-        
-        <label>
-            <input type="Checkbox" id="tos" name="tos" required>
-            I agree to the TOS
-        </label><br>
-        
-        <input type="submit" value="Sign Up">
-    </form>
+	<!-- the entire body must be written by student -->
+	<form action="" method="post">
+      <label for="name">Name</label>
+      <input type="text" id="name" required placeholder="Name"><br><br>
+      <label for="email">Email</label>
+      <input type="text" id="email" required placeholder="Email"><br><br>
+      <label for="gender">Gender</label>
+      <input type="radio" name="gender" id="gender_m" required>
+		<label>Male</label>
+      <input type="radio" name="gender" id="gender_f"required>
+		<label for="gender_m">Female</label><br><br>
+      <label for="cars">Car Brands</label>
+      <select name="cars" id="cars" required aria-placeholder="--Please choose an option-">
+		  <option value="">--Please choose an option--</option>
+         <option value="banze">benze</option>
+         <option value="bmw">BMW</option>
+         <option value="scarpio">scarpio</option>
+      </select><br><br>
+      <label for="age">Age</label>
+      <input type="number" name="age" required id="age" placeholder="Age"> <br><br>
+      <label for="dob">DOB</label>
+      <input type="date" name="dob" id="dob" required><br><br>
+      <label for="tel">Phone Number</label>
+      <input type="tel" name="tel" id="tel" placeholder="xxx-xxx-xxxx"><br><br>
+      <label for="password">Password</label>
+      <input type="password" name="password" id="password" required placeholder="Password"><br><br>
+      <input type="checkbox" name="" id="tos" required>
+      <label for="tos">I agree to the TOS</label><br><br>
+	  <button type="submit">submit</button>
+   </form>
+    <script type="text/javascript" src="./script.js">
+</script>
+
 </body>
+
 </html>
